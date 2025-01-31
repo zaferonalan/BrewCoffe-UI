@@ -6,8 +6,8 @@ import ResponsiveMenu from './ResponsiveMenu';
 const Navbar = () => {
     const [open, setOpen] = useState(false)
   return (
-    <div className='bg-amber-950 px-4 md:px-0 fixed z-50 top-0 w-full'>
-        <div className='max-w-screen-xl md:max-w-screen-2xl mx-auto flex justify-between items-center py-2'>
+    <div className='bg-amber-950 px-4  fixed z-50 top-0 w-full'>
+        <div className='max-w-screen-lg md:max-w-screen-xl lg:max-w-screen-2xl mx-auto flex justify-between items-center py-2'>
             {/*! Logo Section */}
             <div className='flex items-center'>
                 <img src={Logo} alt="" className='w-14 h-12' />
