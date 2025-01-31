@@ -1,4 +1,5 @@
 import Hero from "./components/Hero"
+import Menu from "./components/Menu"
 import Navbar from "./components/Navbar"
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <>
       <Navbar/>
       <Hero/>
+      <Menu/>
     </>
   )
 }

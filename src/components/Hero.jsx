@@ -46,7 +46,7 @@ const Hero = () => {
                     initial={{ opacity: 0, x: 400, scale:0.7 }}
                     whileInView={{opacity: 1, x: 0, scale: 1, rotate: 45}}
                     transition={{duration: 1.8, delay: 0.8}} 
-                    src={Bean2} alt="" className='absolute hidden md:block lg:bottom-56 xl:bottom-48 xl:left-72 lg:left-52 w-20 rotate-45' />
+                    src={Bean2} alt="" className='absolute hidden md:block lg:-bottom-40 xl:bottom-48 xl:left-72 lg:left-52 w-20 rotate-45' />
                 <motion.img
                     initial={{ opacity: 0, x: 600, y: 200, scale:0.7 }}
                     whileInView={{opacity: 1, x: 0, y: 0, scale: 1}}
