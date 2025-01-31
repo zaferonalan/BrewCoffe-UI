@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import Logo from '../assets/Logo.png';
-import { Menu, X } from 'lucide';
+import { Menu, X } from 'lucide-react';
+import ResponsiveMenu from './ResponsiveMenu';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
   return (
     <div className='bg-amber-950 px-4 md:px-0 fixed z-50 top-0 w-full'>
-        <div className='max-w-screen-2xl mx-auto flex justify-between items-center py-2'>
+        <div className='max-w-screen-xl md:max-w-screen-2xl mx-auto flex justify-between items-center py-2'>
             {/*! Logo Section */}
             <div className='flex items-center'>
                 <img src={Logo} alt="" className='w-14 h-12' />
@@ -19,13 +20,15 @@ const Navbar = () => {
                     <li className='cursor-pointer'><a href='#menu' className='text-white hover:text-amber-700'>Menu</a></li>
                     <li className='cursor-pointer'><a href='#about' className='text-white hover:text-amber-700'>About</a></li>
                     <li className='cursor-pointer'><a href='#testimonial' className='text-white hover:text-amber-700'>Testimonial</a></li>
-                    <button className='bg-amber-800 text-white hover:bg-amber-900 px-3 py-1 rounded-md'>Contact</button>
+                    <button className='bg-amber-800 text-white hover:bg-amber-900 px-3 py-1 rounded-md'> <a href="#contact">Contact</a></button>
                 </ul>
             </nav>
             {
                open ? <X onClick={()=> setOpen(false)} className="text-white w-7 h-7 md:hidden"/>:<Menu onClick={() => setOpen(true)} className="text-white w-7 h-7 md:hidden"/> 
             }
         </div>
+        {/* Mobile Menu */}
+        <ResponsiveMenu open={open} setOpen={setOpen}/>
     </div>
   )
 }
